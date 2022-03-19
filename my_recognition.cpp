@@ -26,7 +26,7 @@ int main(int argc, char** argv)
 
     imageNet* net = imageNet::Create(imageNet::GOOGLENET);
 
-    IF(!net)
+    if(!net)
     {
         printf("Failed to load image recognition nw\n");
         return 0;
@@ -41,7 +41,7 @@ int main(int argc, char** argv)
         printf("index is recognized as '%s' (class #%i) with %.2f%% confidence\n" , classDesc, classIndex, confidence * 100.0f);
     }
     else
-        print("Failed to classify image\n");
+        printf("Failed to classify image\n");
 
     delete net;
 

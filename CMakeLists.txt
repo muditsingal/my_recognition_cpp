@@ -17,7 +17,7 @@ find_package(CUDA)
 link_directories(/usr/lib/aarch64-linux-gnu/tegra)
 
 # compile the my-recognition program
-cuda_add_executable(my-recognition my_recognition.cpp)
+cuda_add_executable(my_recognition_cpp my_recognition.cpp)
 
 # link my-recognition to jetson-inference library
 target_link_libraries(my_recognition_cpp jetson-inference)
